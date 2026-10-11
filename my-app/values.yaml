@@ -1,0 +1,18 @@
+nginx:
+  replicaCount: 1
+  image:
+    repository: nginx
+    tag: "1.27"
+    pullPolicy: IfNotPresent
+  service:
+    port: 80
+
+multitool:
+  replicaCount: 1
+  image:
+    repository: wbitt/network-multitool
+    tag: "latest"
+    pullPolicy: IfNotPresent
+  httpPort: 8080
+  service:
+    port: 8080
